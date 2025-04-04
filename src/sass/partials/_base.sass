@@ -1,0 +1,290 @@
+@use '../partials/_variables' as *
+@use '../partials/_mixins' as *
+
+body, html
+  margin: 0
+  padding: 0
+  font-family: $font-main
+  color: $text-color
+
+.navbar
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  padding: 30px 65px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: transparent
+
+  .logo
+    font-size: 15px
+    font-weight: 400
+    color: $text-secondary
+
+    span
+      font-weight: 700
+      color: $text-color
+      text-transform: uppercase
+
+  .menu
+    a
+      color: $text-secondary
+      text-decoration: none
+      margin-left: 30px
+      font-size: 15px
+      font-weight: 500
+
+
+.hero
+  background: $hero-image center/cover no-repeat
+  height: 100vh
+  position: relative
+  +flex-center
+  flex-direction: column
+  text-align: center
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $overlay-color
+
+  .content
+    position: relative
+    max-width: 800px
+    padding: 0 25px
+
+    h1
+      font-size: 45px
+      font-weight: bold
+      margin-bottom: 10px
+      color: $text-color
+
+    p
+      font-size: 15px
+      color: $text-secondary
+      margin-bottom: 30px
+      line-height: 25px
+
+    .btn
+      +button-style
+
+.section1
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  padding: 100px 65px
+  gap: 65px
+  background-color: white
+
+  .titleColumn
+    flex: 1
+    +stackedTitles
+
+    .mainTitle
+      font-size: 30px
+      font-weight: 700
+      color: black
+      margin: 0
+
+    .subTitle
+      font-size: 30px
+      font-weight: 700
+      color: black
+      margin: 0
+
+    .captionText
+      font-size: 15px
+      color: black
+      margin-top: 10px
+      text-transform: uppercase
+
+  .textBlock
+    flex: 2
+    color: #666
+    font-size: 15px
+    line-height: 30px
+    display: flex
+    flex-direction: column
+    gap: 25px
+
+.section2
+  background: #f5f5f5
+  padding: 80px 50px
+  text-align: center
+
+  .sectionHeader
+    margin-bottom: 50px
+
+    .sectionTitle
+      font-size: 30px
+      font-weight: 700
+      color: #333
+      margin-bottom: 8px
+
+    .sectionSubtitle
+      font-size: 15px
+      color: $text-secondary
+
+  .imageGrid
+    display: flex
+    justify-content: center
+    gap: 35px
+    flex-wrap: wrap
+    margin-bottom: 50px
+
+    .imageCard
+      background: white
+      width: 300px
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05)
+      display: flex
+      flex-direction: column
+
+      img
+        width: 100%
+        height: auto
+
+      p
+        font-size: 15px
+        font-weight: 500
+        color: #333
+        padding: 16px
+        margin: 0
+
+  .buttonGroup
+    display: flex
+    justify-content: center
+    gap: 15px
+
+.section3
+  padding: 100px 65px
+  background-color: #ffffff
+  text-align: center
+
+  .sectionHeader
+    margin-bottom: 65px
+
+    .sectionTitle
+      font-size: 35px
+      font-weight: 700
+      color: #333
+
+    .sectionSubtitle
+      color: $text-secondary
+      font-size: 15px
+      margin-top: 10px
+
+  .featureGrid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 50px
+    max-width: 1000px
+    margin: 0 auto
+
+    .featureItem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 30px
+      text-align: left
+
+      &:nth-child(even)
+        flex-direction: row-reverse
+
+      .featureText
+        h3
+          font-size: 15px
+          font-weight: 700
+          color: #333
+          margin-bottom: 5px
+          text-transform: uppercase
+
+        h4
+          font-size: 15px
+          font-weight: 500
+          color: $text-secondary
+          margin-bottom: 15px
+          text-transform: uppercase
+
+        p
+          font-size: 15.2px
+          color: #666
+
+      .featureImg
+        img
+          width: 130px
+          height: 130px
+          border-radius: 50%
+          border: 5px solid #eee
+
+.section4
+  position: relative
+  background: $hero-image
+  height: 300px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  color: $text-color
+
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+
+  .sectionContent
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 25px
+    padding: 30px
+
+    h2
+      font-size: 30px
+      font-weight: 700
+      color: $text-color
+
+    p
+      color: $text-secondary
+      font-size: 15px
+      margin: 0
+
+    .btn
+      font-weight: bold
+      padding: 15px 30px
+
+.siteFooter
+  background: #f8f8f8
+  padding: 50px 30px
+  text-align: center
+  font-size: 15px
+  color: $text-secondary
+
+  .socialIcons
+    margin-bottom: 25px
+
+    a
+      margin: 0 10px
+      color: $text-secondary
+      font-size: 20px
+
+  .footerCredits
+    display: flex
+    justify-content: center
+    gap: 25px
+    flex-wrap: wrap
+
+    a
+      color: $text-secondary
+      text-decoration: none
+
+  

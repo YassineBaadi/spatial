@@ -1,0 +1,84 @@
+// Mobile (max 768px)
+@media (max-width: 768px)
+  .navbar
+    flex-direction: column
+    padding: 15px 25px
+
+    .menu
+      margin-top: 10px
+      a
+        margin-left: 0
+        margin-right: 15px
+
+  .hero .content
+    h1
+      font-size: 30px
+    p
+      font-size: 15px
+      margin-bottom: 25px
+
+  .section1
+    flex-direction: column
+    padding: 50px 25px
+    gap: 30px
+
+  .section2
+    padding: 50px 25px
+
+    .imageGrid
+      flex-direction: column
+      align-items: center
+
+  .section3
+    padding: 50px 25px
+
+    .featureGrid
+      grid-template-columns: 1fr
+      gap: 30px
+
+      .featureItem
+        flex-direction: column
+        text-align: center
+
+        .featureImg
+          margin-bottom: 15px
+
+  .section4
+    height: auto
+    padding: 50px 25px
+
+  .siteFooter
+    padding: 30px 25px
+    .footerCredits
+      flex-direction: column
+      gap: 10px
+
+// Tablette (768px à 992px)
+@media (min-width: 768px) and (max-width: 992px)
+  .navbar
+    padding: 25px 30px
+
+  .section1
+    flex-direction: column
+    gap: 40px
+    padding: 65px 30px
+
+  .section2
+    padding: 65px 30px
+
+  .section3
+    padding: 65px 30px
+
+    .featureGrid
+      grid-template-columns: 1fr
+      gap: 40px
+
+      .featureItem
+        flex-direction: column
+        text-align: center
+
+  .section4
+    padding: 65px 30px
+
+  .siteFooter
+    padding: 40px 30px

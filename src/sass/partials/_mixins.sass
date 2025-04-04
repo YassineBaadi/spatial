@@ -1,0 +1,25 @@
+@use '../partials/_variables' as *
+
+
+@mixin nav
+    background-color: $baseColor
+    height: 200px
+
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=button-style
+  background-color: $primary-color
+  color: $text-color
+  padding: 15px 35px
+  border: none
+  border-radius: 5px
+  font-weight: bold
+
+// TITRE EMPILÉ
+=stackedTitles
+  display: flex
+  flex-direction: column
+  gap: 10px
